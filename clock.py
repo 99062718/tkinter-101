@@ -9,10 +9,10 @@ currentText = tkinter.StringVar(value=0)
 def setTime():
     currentTime = datetime.now()
     currentText.set(currentTime.strftime("%H:%M:%S"))
-    mainWindow.after(200, setTime)
+    mainWindow.after(500, setTime)
 
 label = tkinter.Label(mainWindow)
-label.configure(textvariable=currentText, font=("comic sans", 40))
+label.configure(textvariable=currentText, font=("comic sans", 60))
 label.pack(ipadx = 500, ipady = 200)
 
 mainWindow.after(200, setTime)
